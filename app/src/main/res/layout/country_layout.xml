@@ -20,30 +20,29 @@
         android:id="@+id/country_capital"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/country_name"
-        app:layout_constraintStart_toEndOf="@+id/country_name"
-        app:layout_constraintTop_toTopOf="@+id/country_name" />
+        app:layout_constraintStart_toStartOf="@+id/country_name"
+        app:layout_constraintTop_toBottomOf="@+id/country_name" />
 
     <TextView
-        android:id="@+id/capital_subregion"
+        android:id="@+id/country_subregion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/captial_region"
-        app:layout_constraintStart_toEndOf="@+id/captial_region"
-        app:layout_constraintTop_toTopOf="@+id/captial_region" />
+        app:layout_constraintBottom_toBottomOf="@+id/country_region"
+        app:layout_constraintStart_toEndOf="@+id/country_region"
+        app:layout_constraintTop_toTopOf="@+id/country_region" />
 
     <TextView
-        android:id="@+id/captial_region"
-        android:layout_width="52dp"
-        android:layout_height="17dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/country_region"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="@+id/country_name"
-        app:layout_constraintTop_toBottomOf="@+id/country_name" />
+        app:layout_constraintTop_toBottomOf="@+id/country_capital" />
 
     <ImageView
         android:id="@+id/country_image"
@@ -75,6 +74,16 @@
         android:layout_marginEnd="4dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/captial_region"
-        app:layout_constraintTop_toBottomOf="@+id/captial_region" />
+        app:layout_constraintStart_toStartOf="@+id/country_region"
+        app:layout_constraintTop_toBottomOf="@+id/country_region" />
+
+    <TextView
+        android:id="@+id/country_population"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/country_name"
+        app:layout_constraintStart_toEndOf="@+id/country_name"
+        app:layout_constraintTop_toTopOf="@+id/country_name" />
 </androidx.constraintlayout.widget.ConstraintLayout>

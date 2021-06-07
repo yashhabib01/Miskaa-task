@@ -2,12 +2,12 @@ package com.example.miskaa_task.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,7 +19,6 @@ import com.pixplicity.sharp.Sharp;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
 import java.util.List;
 
 import okhttp3.Cache;
@@ -58,7 +57,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
         holder.sub_region.setText("Sub-Region: "+ country.getSubregion());
         holder.borders.setText("Borders: " + country.getBorders().toString());
         holder.languages.setText("languages: " + country.getLanguages().toString());
-
+        holder.population.setText("Population: "+ country.getPopulation());
         fetchSvg(context,country.getFlag(),holder.country_image);
 
 
@@ -80,17 +79,18 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
 
     public class CountryViewHolder extends RecyclerView.ViewHolder{
 
-        public TextView capital,region,name,sub_region, languages, borders;
+        public TextView capital,region,name,sub_region, languages, borders,population;
         public  ImageView country_image;
         public CountryViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.country_name);
-            region = itemView.findViewById(R.id.captial_region);
-            sub_region = itemView.findViewById(R.id.capital_subregion);
+            region = itemView.findViewById(R.id.country_region);
+            sub_region = itemView.findViewById(R.id.country_subregion);
             capital = itemView.findViewById(R.id.country_capital);
             country_image = itemView.findViewById(R.id.country_image);
             languages = itemView.findViewById(R.id.country_languages);
             borders  = itemView.findViewById(R.id.country_borders);
+            population = itemView.findViewById(R.id.country_population);
 
         }
     }
