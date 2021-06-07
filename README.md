@@ -1,3 +1,3 @@
 # Miskaa-task
 
-<img  width=300 height=500 src="https://user-images.githubusercontent.com/75259953/120931569-c61c7280-c6b7-11eb-8b46-8b46aa5b8bbf.png"/>
+<img  width=250 height=500 src="https://user-images.githubusercontent.com/75259953/120953982-cfd3c380-c713-11eb-99bc-f0692d6b1d6c.png"/>
